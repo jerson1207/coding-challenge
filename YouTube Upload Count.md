@@ -24,4 +24,8 @@ end
 def upload_count(dates, month)
   dates.count { |d| d.start_with?(month) }
 end
+
+def upload_count(dates, month)
+  dates.select{|a| a.include? month}.count	
+end
 ```
